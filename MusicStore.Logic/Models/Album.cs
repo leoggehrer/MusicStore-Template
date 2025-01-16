@@ -37,9 +37,8 @@
         /// <exception cref="ArgumentNullException">Thrown when the other album is null.</exception>
         public void CopyProperties(Contracts.IAlbum other)
         {
-            ArgumentNullException.ThrowIfNull(other);
+            base.CopyProperties(other);
 
-            Id = other.Id;
             ArtistId = other.ArtistId;
             Title = other.Title;
         }

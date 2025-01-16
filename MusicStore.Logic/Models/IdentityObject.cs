@@ -16,6 +16,18 @@
         #endregion Properties
 
         /// <summary>
+        /// Copies the properties from another identifiable object.
+        /// </summary>
+        /// <param name="other">The other album to copy properties from.</param>
+        /// <exception cref="ArgumentNullException">Thrown when the other album is null.</exception>
+        protected virtual void CopyProperties(Contracts.IIdentifiable other)
+        {
+            ArgumentNullException.ThrowIfNull(other);
+
+            Id = other.Id;
+        }
+
+        /// <summary>
         /// Determines whether the specified object is equal to the current object.
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>

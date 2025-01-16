@@ -27,9 +27,8 @@
         /// <exception cref="ArgumentNullException">Thrown when the other genre is null.</exception>
         public void CopyProperties(Contracts.IGenre other)
         {
-            ArgumentNullException.ThrowIfNull(other);
+            base.CopyProperties(other);
 
-            Id = other.Id;
             Name = other.Name;
         }
 

@@ -64,7 +64,6 @@
         {
             ArgumentNullException.ThrowIfNull(other);
 
-            Id = other.Id;
             AlbumId = other.AlbumId;
             GenreId = other.GenreId;
             Title = other.Title;

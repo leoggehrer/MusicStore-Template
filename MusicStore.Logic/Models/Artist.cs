@@ -27,7 +27,7 @@
         /// <exception cref="ArgumentNullException">Thrown when the other artist is null.</exception>
         public void CopyProperties(Contracts.IArtist other)
         {
-            ArgumentNullException.ThrowIfNull(other);
+            Id = other.Id;
 
             Id = other.Id;
             Name = other.Name;

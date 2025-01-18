@@ -3,7 +3,6 @@
     /// <summary>
     /// Represents an album in the music store.
     /// </summary>
-    [Serializable]
     public partial class Album : IdentityObject, Contracts.IAlbum
     {
         #region Properties

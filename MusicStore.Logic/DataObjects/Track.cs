@@ -3,7 +3,6 @@
     /// <summary>
     /// Represents a track in the music store.
     /// </summary>
-    [Serializable]
     public partial class Track : IdentityObject, Contracts.ITrack
     {
         #region Properties

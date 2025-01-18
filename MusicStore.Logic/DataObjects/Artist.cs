@@ -3,7 +3,6 @@
     /// <summary>
     /// Represents an artist in the music store.
     /// </summary>
-    [Serializable]
     public partial class Artist : IdentityObject, Contracts.IArtist
     {
         #region Properties
@@ -17,7 +16,7 @@
         /// <summary>
         /// Gets or sets the albums associated with the artist.
         /// </summary>
-        public List<Album> Albums { get; set; } = new List<Album>();
+        public List<Album> Albums { get; set; } = [];
         #endregion Navigation Properties
 
         /// <summary>

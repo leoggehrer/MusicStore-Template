@@ -3,7 +3,6 @@
     /// <summary>
     /// Represents an abstract base class for identifiable objects.
     /// </summary>
-    [Serializable]
     public abstract partial class IdentityObject : Contracts.IIdentifiable
     {
         #region Properties

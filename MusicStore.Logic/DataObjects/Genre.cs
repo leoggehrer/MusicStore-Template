@@ -1,4 +1,4 @@
-﻿namespace MusicStore.Logic.Models
+﻿namespace MusicStore.Logic.DataObjects
 {
     /// <summary>
     /// Represents a music genre with an identifiable ID and a name.

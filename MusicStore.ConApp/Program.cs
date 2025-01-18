@@ -10,7 +10,7 @@ namespace MusicStore.ConApp
             string input = string.Empty;
             MusicStoreContext context = new();
 
-            while (input.ToLower() != "x")
+            while (!input.Equals("x", StringComparison.CurrentCultureIgnoreCase))
             {
                 Console.Clear();
                 Console.WriteLine("MusicStore");

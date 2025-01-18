@@ -1,4 +1,4 @@
-﻿namespace MusicStore.Logic.Models
+﻿namespace MusicStore.Logic.DataObjects
 {
     /// <summary>
     /// Represents an abstract base class for identifiable objects.

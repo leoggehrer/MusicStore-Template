@@ -1,4 +1,4 @@
-﻿using MusicStore.Logic.Models;
+﻿using MusicStore.Logic.DataObjects;
 
 namespace MusicStore.Logic.Contracts
 {

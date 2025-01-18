@@ -1,4 +1,4 @@
-﻿namespace MusicStore.Logic.Models
+﻿namespace MusicStore.Logic.DataObjects
 {
     /// <summary>
     /// Represents an album in the music store.
@@ -27,7 +27,7 @@
         /// <summary>
         /// Gets or sets the tracks in the album.
         /// </summary>
-        public List<Track> Tracks { get; set; } = new List<Track>();
+        public List<Track> Tracks { get; set; } = [];
         #endregion Navigation Properties
 
         /// <summary>

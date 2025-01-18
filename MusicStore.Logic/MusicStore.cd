@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="MusicStore.Logic.Models.Album">
+  <Class Name="MusicStore.Logic.DataObjects.Album">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEAAAEAEAAAAEQAAAIAAAAAAAAAAAAAAAAA=</HashCode>
@@ -14,7 +14,7 @@
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MusicStore.Logic.Models.Artist">
+  <Class Name="MusicStore.Logic.DataObjects.Artist">
     <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAQQAAAAAAAAAAAAACAAAAAA=</HashCode>
@@ -25,7 +25,7 @@
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MusicStore.Logic.Models.Genre">
+  <Class Name="MusicStore.Logic.DataObjects.Genre">
     <Position X="4.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEAAAAAEAAAAAQQAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -36,7 +36,7 @@
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MusicStore.Logic.Models.Track">
+  <Class Name="MusicStore.Logic.DataObjects.Track">
     <Position X="1.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAACAIEAEAAIAAQAAgAAAAAAAAAAICEAAAAA=</HashCode>

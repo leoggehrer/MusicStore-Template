@@ -6,29 +6,24 @@ namespace MusicStore.ConApp
     {
         static void Main(/*string[] args*/)
         {
-            int index = 1;
             string input = string.Empty;
             MusicStoreContext context = new();
 
             while (!input.Equals("x", StringComparison.CurrentCultureIgnoreCase))
             {
+                int index = 1;
                 Console.Clear();
                 Console.WriteLine("MusicStore");
                 Console.WriteLine("==========================================");
 
-                Console.WriteLine($"{nameof(Logic.Statistics.MusicStoreStatistics.PrintArtistAndAlbum)}....{index++}");
-                Console.WriteLine($"{nameof(Logic.Statistics.MusicStoreStatistics.PrintArtistAndTracks)}...{index++}");
-                Console.WriteLine($"{nameof(Logic.Statistics.MusicStoreStatistics.PrintArtistAndTimes)}....{index++}");
-                Console.WriteLine($"{nameof(Logic.Statistics.MusicStoreStatistics.PrintAlbumAndTracks)}....{index++}");
-                Console.WriteLine($"{nameof(Logic.Statistics.MusicStoreStatistics.PrintAlbumAndTimes)}.....{index++}");
-                Console.WriteLine($"{nameof(Logic.Statistics.MusicStoreStatistics.PrintAverageByGenre)}....{index++}");
-                Console.WriteLine($"{nameof(Logic.Statistics.MusicStoreStatistics.PrintAverageByAlbum)}....{index++}");
-                Console.WriteLine($"{nameof(Logic.Statistics.MusicStoreStatistics.PrintAverageByTrack)}....{index++}");
-                Console.WriteLine($"{nameof(Logic.Statistics.MusicStoreStatistics.PrintGenreAndTitles)}....{index++}");
+                Console.WriteLine($"{nameof(PrintGenres),-25}....{index++}");
+                Console.WriteLine($"{nameof(PrintArtists),-25}....{index++}");
+                Console.WriteLine($"{nameof(PrintAlbums),-25}....{index++}");
+                Console.WriteLine($"{nameof(PrintTracks),-25}....{index++}");
 
                 Console.WriteLine();
                 Console.WriteLine($"Exit...............x");
-                Console.Write("Your choice:");
+                Console.Write("Your choice: ");
 
                 input = Console.ReadLine()!;
                 if (Int32.TryParse(input, out int choice))
@@ -36,31 +31,16 @@ namespace MusicStore.ConApp
                     switch (choice)
                     {
                         case 1:
-                            Logic.Statistics.MusicStoreStatistics.PrintArtistAndAlbum(context);
+                            PrintGenres(context);
                             break;
                         case 2:
-                            Logic.Statistics.MusicStoreStatistics.PrintArtistAndTracks(context);
+                            PrintArtists(context);
                             break;
                         case 3:
-                            Logic.Statistics.MusicStoreStatistics.PrintArtistAndTimes(context);
+                            PrintAlbums(context);
                             break;
                         case 4:
-                            Logic.Statistics.MusicStoreStatistics.PrintAlbumAndTracks(context);
-                            break;
-                        case 5:
-                            Logic.Statistics.MusicStoreStatistics.PrintAlbumAndTimes(context);
-                            break;
-                        case 6:
-                            Logic.Statistics.MusicStoreStatistics.PrintAverageByGenre(context);
-                            break;
-                        case 7:
-                            Logic.Statistics.MusicStoreStatistics.PrintAverageByAlbum(context);
-                            break;
-                        case 8:
-                            Logic.Statistics.MusicStoreStatistics.PrintAverageByTrack(context);
-                            break;
-                        case 9:
-                            Logic.Statistics.MusicStoreStatistics.PrintGenreAndTitles(context);
+                            PrintTracks(context);
                             break;
                         default:
                             break;

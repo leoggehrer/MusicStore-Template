@@ -1,13 +1,16 @@
-﻿using MusicStore.Logic.DataContext;
+﻿using MusicStore.Logic.DataObjects;
 
 namespace MusicStore.ConApp
 {
     internal class Program
     {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
         static void Main(/*string[] args*/)
         {
             string input = string.Empty;
-            MusicStoreContext context = new();
+            Logic.Contracts.IMusicStoreContext context = Logic.DataContext.Factory.CreateMusicStoreContext();
 
             while (!input.Equals("x", StringComparison.CurrentCultureIgnoreCase))
             {
@@ -17,9 +20,19 @@ namespace MusicStore.ConApp
                 Console.WriteLine("==========================================");
 
                 Console.WriteLine($"{nameof(PrintGenres),-25}....{index++}");
+                Console.WriteLine($"{nameof(QueryGenres),-25}....{index++}");
+                Console.WriteLine($"{nameof(AddGenre),-25}....{index++}");
+                Console.WriteLine($"{nameof(DeleteGenre),-25}....{index++}");
                 Console.WriteLine($"{nameof(PrintArtists),-25}....{index++}");
+                Console.WriteLine($"{nameof(QueryArtists),-25}....{index++}");
+                Console.WriteLine($"{nameof(AddArtist),-25}....{index++}");
+                Console.WriteLine($"{nameof(DeleteArtist),-25}....{index++}");
                 Console.WriteLine($"{nameof(PrintAlbums),-25}....{index++}");
+                Console.WriteLine($"{nameof(QueryAlbums),-25}....{index++}");
+                Console.WriteLine($"{nameof(AddAlbum),-25}....{index++}");
+                Console.WriteLine($"{nameof(DeleteAlbum),-25}....{index++}");
                 Console.WriteLine($"{nameof(PrintTracks),-25}....{index++}");
+                Console.WriteLine($"{nameof(QueryTracks),-25}....{index++}");
 
                 Console.WriteLine();
                 Console.WriteLine($"Exit...............x");
@@ -32,27 +45,82 @@ namespace MusicStore.ConApp
                     {
                         case 1:
                             PrintGenres(context);
+                            Console.WriteLine();
+                            Console.Write("Continue with Enter...");
+                            Console.ReadLine();
                             break;
                         case 2:
-                            PrintArtists(context);
+                            QueryGenres(context);
+                            Console.WriteLine();
+                            Console.Write("Continue with Enter...");
+                            Console.ReadLine();
                             break;
                         case 3:
-                            PrintAlbums(context);
+                            AddGenre(context);
                             break;
                         case 4:
+                            DeleteGenre(context);
+                            break;
+                        case 5:
+                            PrintArtists(context);
+                            Console.WriteLine();
+                            Console.Write("Continue with Enter...");
+                            Console.ReadLine();
+                            break;
+                        case 6:
+                            QueryArtists(context);
+                            Console.WriteLine();
+                            Console.Write("Continue with Enter...");
+                            Console.ReadLine();
+                            break;
+                        case 7:
+                            AddArtist(context);
+                            break;
+                        case 8:
+                            DeleteArtist(context);
+                            break;
+                        case 9:
+                            PrintAlbums(context);
+                            Console.WriteLine();
+                            Console.Write("Continue with Enter...");
+                            Console.ReadLine();
+                            break;
+                        case 10:
+                            QueryAlbums(context);
+                            Console.WriteLine();
+                            Console.Write("Continue with Enter...");
+                            Console.ReadLine();
+                            break;
+                        case 11:
+                            AddAlbum(context);
+                            break;
+                        case 12:
+                            DeleteAlbum(context);
+                            break;
+                        case 13:
                             PrintTracks(context);
+                            Console.WriteLine();
+                            Console.Write("Continue with Enter...");
+                            Console.ReadLine();
+                            break;
+                        case 14:
+                            QueryTracks(context);
+                            Console.WriteLine();
+                            Console.Write("Continue with Enter...");
+                            Console.ReadLine();
                             break;
                         default:
                             break;
                     }
-                    Console.WriteLine();
-                    Console.Write("Continue with Enter...");
-                    Console.ReadLine();
                 }
             }
         }
 
-        private static void PrintGenres(MusicStoreContext context)
+        /// <summary>
+        /// Prints all genres in the context.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void PrintGenres(Logic.Contracts.IMusicStoreContext context)
         {
             Console.WriteLine();
             Console.WriteLine("Genres:");
@@ -62,35 +130,122 @@ namespace MusicStore.ConApp
                 Console.WriteLine($"{item}");
             }
         }
-        private static void PrintArtists(MusicStoreContext context)
+
+        /// <summary>
+        /// Queries genres based on a user-provided condition.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void QueryGenres(Logic.Contracts.IMusicStoreContext context)
         {
-            Console.WriteLine();
-            Console.WriteLine("Artists:");
-            Console.WriteLine("-------");
-            foreach (var item in context.ArtistSet)
-            {
-                Console.WriteLine($"{item}");
-            }
+            throw new NotImplementedException();
         }
-        private static void PrintAlbums(MusicStoreContext context)
+
+        /// <summary>
+        /// Adds a new genre to the context.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void AddGenre(Logic.Contracts.IMusicStoreContext context)
         {
-            Console.WriteLine();
-            Console.WriteLine("Albums:");
-            Console.WriteLine("-------");
-            foreach (var item in context.AlbumSet)
-            {
-                Console.WriteLine($"{item}");
-            }
+            throw new NotImplementedException();
         }
-        private static void PrintTracks(MusicStoreContext context)
+
+        /// <summary>
+        /// Deletes a genre from the context.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void DeleteGenre(Logic.Contracts.IMusicStoreContext context)
         {
-            Console.WriteLine();
-            Console.WriteLine("Tracks:");
-            Console.WriteLine("-------");
-            foreach (var item in context.TrackSet)
-            {
-                Console.WriteLine($"{item}");
-            }
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Prints all artists in the context.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void PrintArtists(Logic.Contracts.IMusicStoreContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Queries artists based on a user-provided condition.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void QueryArtists(Logic.Contracts.IMusicStoreContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Adds a new artist to the context.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void AddArtist(Logic.Contracts.IMusicStoreContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes an artist from the context.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void DeleteArtist(Logic.Contracts.IMusicStoreContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Prints all albums in the context.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void PrintAlbums(Logic.Contracts.IMusicStoreContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Queries albums based on a user-provided condition.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void QueryAlbums(Logic.Contracts.IMusicStoreContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Adds a new album to the context.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void AddAlbum(Logic.Contracts.IMusicStoreContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes an album from the context.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void DeleteAlbum(Logic.Contracts.IMusicStoreContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Prints all tracks in the context.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void PrintTracks(Logic.Contracts.IMusicStoreContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Queries tracks based on a user-provided condition.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void QueryTracks(Logic.Contracts.IMusicStoreContext context)
+        {
+            throw new NotImplementedException();
         }
     }
 }

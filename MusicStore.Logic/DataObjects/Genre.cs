@@ -1,4 +1,6 @@
-﻿namespace MusicStore.Logic.DataObjects
+﻿using MusicStore.Logic.Contracts;
+
+namespace MusicStore.Logic.DataObjects
 {
     /// <summary>
     /// Represents a music genre with an identifiable ID and a name.
@@ -16,7 +18,7 @@
         /// <summary>
         /// Gets or sets the tracks associated with the genre.
         /// </summary>
-        public List<Track> Tracks { get; set; } = [];
+        public List<ITrack> Tracks { get; set; } = [];
         #endregion Navigation Properties
 
         /// <summary>

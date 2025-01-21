@@ -23,12 +23,12 @@ namespace MusicStore.Logic.Contracts
         /// <summary>
         /// Gets or sets the artist associated with the album.
         /// </summary>
-        Artist? Artist { get; set; }
+        IArtist? Artist { get; set; }
 
         /// <summary>
         /// Gets or sets the tracks in the album.
         /// </summary>
-        List<Track> Tracks { get; set; }
+        List<ITrack> Tracks { get; set; }
         #endregion Navigation Properties
     }
 }

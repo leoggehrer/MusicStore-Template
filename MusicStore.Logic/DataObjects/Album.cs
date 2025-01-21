@@ -1,4 +1,6 @@
-﻿namespace MusicStore.Logic.DataObjects
+﻿using MusicStore.Logic.Contracts;
+
+namespace MusicStore.Logic.DataObjects
 {
     /// <summary>
     /// Represents an album in the music store.
@@ -21,12 +23,12 @@
         /// <summary>
         /// Gets or sets the artist associated with the album.
         /// </summary>
-        public Artist? Artist { get; set; }
+        public IArtist? Artist { get; set; }
 
         /// <summary>
         /// Gets or sets the tracks in the album.
         /// </summary>
-        public List<Track> Tracks { get; set; } = [];
+        public List<ITrack> Tracks { get; set; } = [];
         #endregion Navigation Properties
 
         /// <summary>
@@ -34,7 +36,7 @@
         /// </summary>
         /// <param name="other">The other album to copy properties from.</param>
         /// <exception cref="ArgumentNullException">Thrown when the other album is null.</exception>
-        public void CopyProperties(Contracts.IAlbum other)
+        public void CopyProperties(IAlbum other)
         {
             base.CopyProperties(other);
 

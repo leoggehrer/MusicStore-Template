@@ -18,7 +18,7 @@ namespace MusicStore.Logic.Contracts
         /// <summary>
         /// Gets or sets the albums associated with the artist.
         /// </summary>
-        List<Album> Albums { get; set; }
+        List<IAlbum> Albums { get; set; }
         #endregion Navigation Properties
     }
 }

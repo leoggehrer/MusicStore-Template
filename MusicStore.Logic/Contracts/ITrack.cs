@@ -48,12 +48,12 @@ namespace MusicStore.Logic.Contracts
         /// <summary>
         /// Gets or sets the album associated with the track.
         /// </summary>
-        Album? Album { get; set; }
+        IAlbum? Album { get; set; }
 
         /// <summary>
         /// Gets or sets the genre associated with the track.
         /// </summary>
-        Genre? Genre { get; set; }
+        IGenre? Genre { get; set; }
         #endregion Navigation Properties
     }
 }

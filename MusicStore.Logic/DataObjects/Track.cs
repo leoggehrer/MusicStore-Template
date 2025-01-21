@@ -1,4 +1,6 @@
-﻿namespace MusicStore.Logic.DataObjects
+﻿using MusicStore.Logic.Contracts;
+
+namespace MusicStore.Logic.DataObjects
 {
     /// <summary>
     /// Represents a track in the music store.
@@ -46,12 +48,12 @@
         /// <summary>
         /// Gets or sets the album associated with the track.
         /// </summary>
-        public Album? Album { get; set; }
+        public IAlbum? Album { get; set; }
 
         /// <summary>
         /// Gets or sets the genre associated with the track.
         /// </summary>
-        public Genre? Genre { get; set; }
+        public IGenre? Genre { get; set; }
         #endregion Navigation Properties
 
         /// <summary>

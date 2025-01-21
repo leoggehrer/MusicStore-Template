@@ -1,6 +1,4 @@
-﻿using MusicStore.Logic.DataObjects;
-
-namespace MusicStore.ConApp
+﻿namespace MusicStore.ConApp
 {
     internal class Program
     {

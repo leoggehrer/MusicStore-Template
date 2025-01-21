@@ -8,7 +8,7 @@
         static void Main(/*string[] args*/)
         {
             string input = string.Empty;
-            Logic.Contracts.IMusicStoreContext context = Logic.DataContext.Factory.CreateMusicStoreContext();
+            Logic.Contracts.IContext context = Logic.DataContext.Factory.CreateContext();
 
             while (!input.Equals("x", StringComparison.CurrentCultureIgnoreCase))
             {
@@ -118,7 +118,7 @@
         /// Prints all genres in the context.
         /// </summary>
         /// <param name="context">The music store context.</param>
-        private static void PrintGenres(Logic.Contracts.IMusicStoreContext context)
+        private static void PrintGenres(Logic.Contracts.IContext context)
         {
             Console.WriteLine();
             Console.WriteLine("Genres:");
@@ -133,7 +133,7 @@
         /// Queries genres based on a user-provided condition.
         /// </summary>
         /// <param name="context">The music store context.</param>
-        private static void QueryGenres(Logic.Contracts.IMusicStoreContext context)
+        private static void QueryGenres(Logic.Contracts.IContext context)
         {
             throw new NotImplementedException();
         }
@@ -142,7 +142,7 @@
         /// Adds a new genre to the context.
         /// </summary>
         /// <param name="context">The music store context.</param>
-        private static void AddGenre(Logic.Contracts.IMusicStoreContext context)
+        private static void AddGenre(Logic.Contracts.IContext context)
         {
             throw new NotImplementedException();
         }
@@ -151,7 +151,7 @@
         /// Deletes a genre from the context.
         /// </summary>
         /// <param name="context">The music store context.</param>
-        private static void DeleteGenre(Logic.Contracts.IMusicStoreContext context)
+        private static void DeleteGenre(Logic.Contracts.IContext context)
         {
             throw new NotImplementedException();
         }
@@ -160,7 +160,7 @@
         /// Prints all artists in the context.
         /// </summary>
         /// <param name="context">The music store context.</param>
-        private static void PrintArtists(Logic.Contracts.IMusicStoreContext context)
+        private static void PrintArtists(Logic.Contracts.IContext context)
         {
             throw new NotImplementedException();
         }
@@ -169,7 +169,7 @@
         /// Queries artists based on a user-provided condition.
         /// </summary>
         /// <param name="context">The music store context.</param>
-        private static void QueryArtists(Logic.Contracts.IMusicStoreContext context)
+        private static void QueryArtists(Logic.Contracts.IContext context)
         {
             throw new NotImplementedException();
         }
@@ -178,7 +178,7 @@
         /// Adds a new artist to the context.
         /// </summary>
         /// <param name="context">The music store context.</param>
-        private static void AddArtist(Logic.Contracts.IMusicStoreContext context)
+        private static void AddArtist(Logic.Contracts.IContext context)
         {
             throw new NotImplementedException();
         }
@@ -187,7 +187,7 @@
         /// Deletes an artist from the context.
         /// </summary>
         /// <param name="context">The music store context.</param>
-        private static void DeleteArtist(Logic.Contracts.IMusicStoreContext context)
+        private static void DeleteArtist(Logic.Contracts.IContext context)
         {
             throw new NotImplementedException();
         }
@@ -196,7 +196,7 @@
         /// Prints all albums in the context.
         /// </summary>
         /// <param name="context">The music store context.</param>
-        private static void PrintAlbums(Logic.Contracts.IMusicStoreContext context)
+        private static void PrintAlbums(Logic.Contracts.IContext context)
         {
             throw new NotImplementedException();
         }
@@ -205,7 +205,7 @@
         /// Queries albums based on a user-provided condition.
         /// </summary>
         /// <param name="context">The music store context.</param>
-        private static void QueryAlbums(Logic.Contracts.IMusicStoreContext context)
+        private static void QueryAlbums(Logic.Contracts.IContext context)
         {
             throw new NotImplementedException();
         }
@@ -214,7 +214,7 @@
         /// Adds a new album to the context.
         /// </summary>
         /// <param name="context">The music store context.</param>
-        private static void AddAlbum(Logic.Contracts.IMusicStoreContext context)
+        private static void AddAlbum(Logic.Contracts.IContext context)
         {
             throw new NotImplementedException();
         }
@@ -223,7 +223,7 @@
         /// Deletes an album from the context.
         /// </summary>
         /// <param name="context">The music store context.</param>
-        private static void DeleteAlbum(Logic.Contracts.IMusicStoreContext context)
+        private static void DeleteAlbum(Logic.Contracts.IContext context)
         {
             throw new NotImplementedException();
         }
@@ -232,7 +232,7 @@
         /// Prints all tracks in the context.
         /// </summary>
         /// <param name="context">The music store context.</param>
-        private static void PrintTracks(Logic.Contracts.IMusicStoreContext context)
+        private static void PrintTracks(Logic.Contracts.IContext context)
         {
             throw new NotImplementedException();
         }
@@ -241,7 +241,7 @@
         /// Queries tracks based on a user-provided condition.
         /// </summary>
         /// <param name="context">The music store context.</param>
-        private static void QueryTracks(Logic.Contracts.IMusicStoreContext context)
+        private static void QueryTracks(Logic.Contracts.IContext context)
         {
             throw new NotImplementedException();
         }

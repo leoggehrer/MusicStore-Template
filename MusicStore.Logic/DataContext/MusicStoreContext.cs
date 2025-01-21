@@ -1,33 +1,32 @@
 ﻿using MusicStore.Logic.Contracts;
-using MusicStore.Logic.DataObjects;
 
 namespace MusicStore.Logic.DataContext
 {
     /// <summary>
     /// Represents the data context for the Music Store application.
     /// </summary>
-    public sealed class MusicStoreContext : IMusicStoreContext
+    public sealed class MusicStoreContext : IContext
     {
         #region Properties
         /// <summary>
         /// Gets or sets the collection of genres.
         /// </summary>
-        public List<Genre> GenreSet { get; set; }
+        public List<IGenre> GenreSet { get; set; }
 
         /// <summary>
         /// Gets or sets the collection of artists.
         /// </summary>
-        public List<Artist> ArtistSet { get; set; }
+        public List<IArtist> ArtistSet { get; set; }
 
         /// <summary>
         /// Gets or sets the collection of albums.
         /// </summary>
-        public List<Album> AlbumSet { get; set; }
+        public List<IAlbum> AlbumSet { get; set; }
 
         /// <summary>
         /// Gets or sets the collection of tracks.
         /// </summary>
-        public List<Track> TrackSet { get; set; }
+        public List<ITrack> TrackSet { get; set; }
         #endregion Properties
 
         /// <summary>
@@ -43,6 +42,11 @@ namespace MusicStore.Logic.DataContext
         /// </summary>
         /// <returns>Returns the count of saved items.</returns>
         public int SaveChanges()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Dispose()
         {
             throw new NotImplementedException();
         }

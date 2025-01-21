@@ -4,10 +4,24 @@
 
 **Lernziele**
 
-- Transformieren von csv-Daten in PoCo's (Models) mit Linq
-- Anwenden von Linq zur Auswertung von Kennzahlen
+- Diese Vorlage dient als Ausgangspunkt für verschiedenste Aufgaben.
 
 ## MusicStore
+
+Das Projekt **'MusicStore'** ist ein kleines datenzentriertes Anwendungsbeispiel mit welchem die Erstellung eines Software-Systems dargestellt werden soll. Aufgrund der Komplexität, die ein Software-System im Allgemeinem darstellt, ist die Erstellung des Beispiels in mehreren Themenbereichen unterteilt. Jedes Thema beginnt mit diesem Vorlage und wird entsprechend der jeweiligen Aufgabenstellung erweitert. 
+
+### Vorlage
+
+In dieser Vorlage gibt es bereits zwei unterschliedliche Projekte:
+
+|Name|Beschreibung|
+|---|---|
+|MusicStore.ConApp| Eine Konsolen-Anwendung zum Starten der Anwendung. Hier werden unterschiedliche  |
+|MusicStore.Logic|In diesem Projekt sind alle Schnittstellen, Models und Geschäftslogiken von MusicStore implementiert.|
+|MusicStore.Logic.Contracts|In diesem Abschnitt befinden sich alle Schnittstellen.|
+|MusicStore.Logic.Models|In diesem Abschnitt befinden sich alle Daten-Objekte (PoCo).|
+|MusicStore.Logic.DataContext|In diesem Abschnitt befindet sich der Daten-Kontext (`MusicStroeContext`). Diese transformiert die csv-Daten in die in die Daten-Objekte und stellt einen Zugriff auf diese Objekte bereit.|
+|MusicStore.Logic.Statistics|In diesem Abschnitt befindet sich die Logik zur Auswertung der Statistik. Die Klasse hat den Namen `MusicStoreStatistics` und stellt die verschiedenen Methoden zur Abfrage der Statistik-Kennzahlen zur Verfügung.|
 
 ### Grundsystem
 

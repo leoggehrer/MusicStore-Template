@@ -31,6 +31,8 @@
                 Console.WriteLine($"{nameof(DeleteAlbum),-25}....{index++}");
                 Console.WriteLine($"{nameof(PrintTracks),-25}....{index++}");
                 Console.WriteLine($"{nameof(QueryTracks),-25}....{index++}");
+                Console.WriteLine($"{nameof(AddTrack),-25}....{index++}");
+                Console.WriteLine($"{nameof(DeleteTrack),-25}....{index++}");
 
                 Console.WriteLine();
                 Console.WriteLine($"Exit...............x");
@@ -107,6 +109,12 @@
                             Console.Write("Continue with Enter...");
                             Console.ReadLine();
                             break;
+                        case 15:
+                            AddTrack(context);
+                            break;
+                        case 16:
+                            DeleteTrack(context);
+                            break;
                         default:
                             break;
                     }
@@ -120,13 +128,7 @@
         /// <param name="context">The music store context.</param>
         private static void PrintGenres(Logic.Contracts.IContext context)
         {
-            Console.WriteLine();
-            Console.WriteLine("Genres:");
-            Console.WriteLine("-------");
-            foreach (var item in context.GenreSet)
-            {
-                Console.WriteLine($"{item}");
-            }
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -242,6 +244,24 @@
         /// </summary>
         /// <param name="context">The music store context.</param>
         private static void QueryTracks(Logic.Contracts.IContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Adds a new track to the context.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void AddTrack(Logic.Contracts.IContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes a track from the context.
+        /// </summary>
+        /// <param name="context">The music store context.</param>
+        private static void DeleteTrack(Logic.Contracts.IContext context)
         {
             throw new NotImplementedException();
         }

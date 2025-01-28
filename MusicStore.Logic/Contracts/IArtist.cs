@@ -11,12 +11,5 @@
         /// </summary>
         string Name { get; set; }
         #endregion Properties
-
-        #region Navigation Properties
-        /// <summary>
-        /// Gets or sets the albums associated with the artist.
-        /// </summary>
-        List<IAlbum> Albums { get; set; }
-        #endregion Navigation Properties
     }
 }

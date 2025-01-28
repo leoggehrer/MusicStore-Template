@@ -7,28 +7,6 @@ namespace MusicStore.Logic.DataContext
     /// </summary>
     public sealed class MusicStoreContext : IContext
     {
-        #region Properties
-        /// <summary>
-        /// Gets or sets the collection of genres.
-        /// </summary>
-        public List<IGenre> GenreSet { get; set; }
-
-        /// <summary>
-        /// Gets or sets the collection of artists.
-        /// </summary>
-        public List<IArtist> ArtistSet { get; set; }
-
-        /// <summary>
-        /// Gets or sets the collection of albums.
-        /// </summary>
-        public List<IAlbum> AlbumSet { get; set; }
-
-        /// <summary>
-        /// Gets or sets the collection of tracks.
-        /// </summary>
-        public List<ITrack> TrackSet { get; set; }
-        #endregion Properties
-
         /// <summary>
         /// Initializes a new instance of the <see cref="MusicStoreContext"/> class.
         /// </summary>

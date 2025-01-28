@@ -1,5 +1,4 @@
-﻿using MusicStore.Logic.DataObjects;
-
+﻿
 namespace MusicStore.Logic.Contracts
 {
     /// <summary>
@@ -43,17 +42,5 @@ namespace MusicStore.Logic.Contracts
         /// </summary>
         double UnitPrice { get; set; }
         #endregion Properties
-
-        #region Navigation Properties
-        /// <summary>
-        /// Gets or sets the album associated with the track.
-        /// </summary>
-        IAlbum? Album { get; set; }
-
-        /// <summary>
-        /// Gets or sets the genre associated with the track.
-        /// </summary>
-        IGenre? Genre { get; set; }
-        #endregion Navigation Properties
     }
 }

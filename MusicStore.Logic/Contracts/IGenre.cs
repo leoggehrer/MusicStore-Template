@@ -11,12 +11,5 @@
         /// </summary>
         string Name { get; set; }
         #endregion Properties
-
-        #region Navigation Properties
-        /// <summary>
-        /// Gets or sets the tracks in the album.
-        /// </summary>
-        List<ITrack> Tracks { get; set; }
-        #endregion Navigation Properties
     }
 }
